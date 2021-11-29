@@ -16,7 +16,7 @@ jobs:
     runs-on: macos-10.15
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - run: echo ${{ secrets.DOCKER_LOGIN }}
+      - run: brew install --cask docker
       - name: Check out the repo
         uses: actions/checkout@v2
       #- name: Build and Push Docker Image
