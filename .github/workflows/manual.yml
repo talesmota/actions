@@ -16,7 +16,15 @@ jobs:
     runs-on: macos-10.15
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - run: brew install --cask docker
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
       - name: Check out the repo
         uses: actions/checkout@v2
       #- name: Build and Push Docker Image
