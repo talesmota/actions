@@ -14,7 +14,7 @@ jobs:
     - run: echo "::set-output name=date::$(date +'%m-%d-%Y--%H-%M-%S')"
       id: date
     - uses: actions/checkout@v2
-    - run: sudo chmod + /build.sh && ./build.sh
+    - run: sudo chmod +x ./build.sh && ./build.sh
     # - uses: "marvinpinto/action-automatic-releases@latest"
     #   with:
     #     repo_token: "${{ secrets.GITHUB_TOKEN }}"
