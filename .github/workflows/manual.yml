@@ -9,7 +9,7 @@ on:
 
 jobs:
   Magma-AGW-Build:
-    runs-on: macos-10.15
+    runs-on: ubuntu-20.04
     steps:
     - run: echo "::set-output name=date::$(date +'%m-%d-%Y--%H-%M-%S')"
       id: date
